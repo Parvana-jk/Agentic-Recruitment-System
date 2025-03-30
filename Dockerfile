@@ -10,7 +10,6 @@ COPY ./requirements.txt /app
 # Install any dependencies specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-
 # Copy the rest of code files into the container
 COPY . /app
 

@@ -30,7 +30,6 @@ The repository is well-organized, containing all necessary components for smooth
   - `requirements.txt` - contains all the prerequisites for running this code
   - `Dockerfile` - contains the Dockerfile configuration for running the Streamlit demo
   - `docker-compose.yaml` - main docker-compose file to launch the complete demo (qdrant, streamlit, ollama)
-    - `ollama.sh` - custom instructions for the ollama container to load the Llama3.1 model and the nomic embedding model
 
 ## Prerequisites
 Ensure you have the following installed:
@@ -67,11 +66,9 @@ Place your data in the `data/` folder:
   ```
 
 ## Configuration
-Update the `.env` file located in `Resume_shortlister/.env` with the required details:
+Create a new environment file called `.env` in the root of the project with following values:
 
 ```bash
-HF_HOME=/root/.cache/huggingface
-
 WATSONX_APIKEY=
 WATSONX_PROJECT_ID=
 
@@ -99,14 +96,20 @@ Run all services (Qdrant, Streamlit, and Ollama) in Docker:
     ```bash
     podman compose up --build -d
     ```
-   or
-    ```bash
-    docker-compose up --build -d
-    ```
+
 
 This will:
 - Start `qdrant`, `streamlit`, and `ollama` inside containers.
 - Mount necessary volumes for persistent storage.
+
+#### NOTE : 
+The ollama container will pull llama3.1 model on first use. Its a large model and may take time to download
+
+If you try to use the streamlit UI, you will get errors. You can monitor the progress of the download by:
+```bash
+podman logs -f ollama
+```
+Once you see that the downloads have finished and the message appears "Ollama is READY to serve models", you can continue with streamlit usage
 
 
 ### **Method 2: Run Streamlit and Ollama Locally, Only Qdrant in Docker**
@@ -146,6 +149,50 @@ If Ollama is slow in Docker, you can run only Qdrant inside a container and exec
 This approach allows faster execution of Ollama and Streamlit without Docker overhead.
 
 ## Usage
+
+When the streamlit UI lauches, you will have 2 fields to provide
+1. **job_role**
+   
+   Example : `Java Developer`
+2. **job_profile**
+   
+   Example : 
+   ```
+   Job Title: Backend Java Developer
+    Location: Rehovot, Israel
+    Experience: 2020 - Present
+
+    Position Overview:
+    We are looking for a skilled Backend Java Developer to join our dynamic team. In this role, you will be responsible for designing, developing, and maintaining the backend systems of a microservice architecture. Your work will focus on building efficient and scalable web applications to handle educational information.
+
+    Key Responsibilities:
+
+    Develop and maintain backend applications using Spring Boot and Spring Security to build RESTful web services.
+    Implement Authentication/Authorization using Spring Security and JWT for secure user authentication.
+    Work with databases such as MongoDB and MySQL, utilizing Hibernate ORM and Java Persistence API (JPA) for data access and management.
+    Write unit tests and conduct defect fixes to ensure the reliability and stability of the system.
+    Interact with APIs and provide email feedback for user-related issues.
+    Utilize Swagger UI to render and interact with the API through REST and HTTPS.
+    Tools & Technologies:
+
+    Spring Boot
+    Spring Security
+    Hibernate ORM
+    MySQL and MongoDB
+    JUnit for testing
+    JWT (JSON Web Token)
+    Swagger UI
+    Maven, JDBC, Apache Tomcat
+    HTML5, CSS3
+    Skills Required:
+
+    Strong expertise in backend development with Java and Spring Boot.
+    Experience with RESTful API development, authentication mechanisms, and working with both SQL and NoSQL databases.
+    Hands-on experience with JUnit testing, defect fixing, and troubleshooting.
+    Familiarity with JSON, Swagger, and building secure applications with JWT.
+   ```
+
+
 - The system will process resumes and match them with job profiles.
 - Interviewers will be selected based on expertise and availability.
 - Meeting slots will be scheduled automatically.

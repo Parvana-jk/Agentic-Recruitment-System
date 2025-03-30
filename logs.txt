@@ -4671,3 +4671,146 @@ Note: The interviewer and slot for each candidate are chosen based on the skills
             Hands-on experience with JUnit testing, defect fixing, and troubleshooting.
             Familiarity with JSON, Swagger, and building secure applications with JWT. Execute the tool and pass on the top 5 candidate information
 ", agent="HR information gatherer", status="started"
+2025-03-30 19:42:51: task_name="None", task="Given a job description (JD) for the role Job Title: Backend Java Developer
+            Location: Rehovot, Israel
+            Experience: 2020 - Present
+
+            Position Overview:
+            We are looking for a skilled Backend Java Developer to join our dynamic team. In this role, you will be responsible for designing, developing, and maintaining the backend systems of a microservice architecture. Your work will focus on building efficient and scalable web applications to handle educational information.
+
+            Key Responsibilities:
+
+            Develop and maintain backend applications using Spring Boot and Spring Security to build RESTful web services.
+            Implement Authentication/Authorization using Spring Security and JWT for secure user authentication.
+            Work with databases such as MongoDB and MySQL, utilizing Hibernate ORM and Java Persistence API (JPA) for data access and management.
+            Write unit tests and conduct defect fixes to ensure the reliability and stability of the system.
+            Interact with APIs and provide email feedback for user-related issues.
+            Utilize Swagger UI to render and interact with the API through REST and HTTPS.
+            Tools & Technologies:
+
+            Spring Boot
+            Spring Security
+            Hibernate ORM
+            MySQL and MongoDB
+            JUnit for testing
+            JWT (JSON Web Token)
+            Swagger UI
+            Maven, JDBC, Apache Tomcat
+            HTML5, CSS3
+            Skills Required:
+
+            Strong expertise in backend development with Java and Spring Boot.
+            Experience with RESTful API development, authentication mechanisms, and working with both SQL and NoSQL databases.
+            Hands-on experience with JUnit testing, defect fixing, and troubleshooting.
+            Familiarity with JSON, Swagger, and building secure applications with JWT. Execute the tool and pass on the top 5 candidate information
+", agent="HR information gatherer", status="completed", output="top_resumes"
+2025-03-30 19:42:51: task_name="None", task="execute the tool and get contact information for each resume  Don't alter tool outputs or make up values
+", agent="Resume Contact Extractor", status="started"
+2025-03-30 19:43:16: task_name="None", task="execute the tool and get contact information for each resume  Don't alter tool outputs or make up values
+", agent="Resume Contact Extractor", status="completed", output="["{\n  \"name\": \"Gloria Romero\",\n  \"email\": \"gloriaromero@gmail.com\",\n  \"phone\": \"8573920202\"\n}", "{\n  \"name\": \"peter kavinsky\",\n  \"email\": \"petah@rmail.com\",\n  \"phone\": \"4567891231\"\n}", "{\n  \"name\": \"Rishon LeZion\",\n  \"email\": \"rishon@gmail.com\",\n  \"phone\": \"1234567891\"\n}", "{\n  \"name\": \"Shawn cane\",\n  \"email\": \"shawne@gmail.com\",\n  \"phone\": \"9024900221\"\n}", "{\n  \"name\": \"ARUSHI YOGI\",\n  \"email\": \"arushi@ymail.com\",\n  \"phone\": \"9023341342\"\n}"]"
+2025-03-30 19:43:16: task_name="None", task="execute the tool and get skills information for each resume  Don't alter tool outputs or make up values
+", agent="Resume Skill Extractor", status="started"
+2025-03-30 19:44:23: task_name="None", task="execute the tool and get skills information for each resume  Don't alter tool outputs or make up values
+", agent="Resume Skill Extractor", status="completed", output="["Here is the extracted skills in high-level expertise areas, structured as a JSON object:\n```\n{\n  \"candidate_email\": \"gloriaromero@gmail.com\",\n  \"frontend\": [\n    \"JavaScript\",\n    \"TypeScript\",\n    \"React\",\n    \"jQuery\",\n    \"HTML\",\n    \"CSS\"\n  ],\n  \"backend\": [\n    \"Java (Spring)\",\n    \"Python\",\n    \"Oracle (+PL/SQL)\",\n    \"PostgreSQL\",\n    \"SQLite\",\n    \"PowerBuilder\",\n    \"VBA\"\n  ],\n  \"databases\": [\n    \"Oracle\",\n    \"PostgreSQL\",\n    \"SQLite\"\n  ],\n  \"version_control\": [\n    \"SVN\",\n    \"VSS\"\n  ],\n  \"microcontrollers\": [\n    \"Arduino\"\n  ],\n  \"programming_languages\": [\n    \"Java\",\n    \"Python\",\n    \"JavaScript\",\n    \"TypeScript\",\n    \"C++\",\n    \"PowerBuilder\",\n    \"VBA\"\n  ],\n  \"ide_and_build_tools\": [\n    \"Jetbrains IDEs\",\n    \"Maven\",\n    \"Gradle\",\n    \"Webpack\",\n    \"npm\"\n  ],\n  \"apis_and_libraries\": [\n    \"Yandex Alisa API\",\n    \"Cannon\",\n    \"OpenSource java/js libs\"\n  ]\n}\n```\nNote that I've grouped related skills into categories, and used arrays to list multiple technologies under each category. Let me know if you'd like me to restructure the JSON object in any way!", "Here is the extracted skills and structured into high-level expertise areas:\n\n```\n{\n  \"candidate_email\": \"petah@rmail.com\",\n  \"frontend\": [\n    \"Angular 4\"\n  ],\n  \"backend\": [\n    \"Java 8\",\n    \"Spring Boot\",\n    \"Hibernate\",\n    \"REST\",\n    \"Broadleaf\",\n    \"Apache Camel\",\n    \"Go language\"\n  ],\n  \"devops\": [\n    \"Jenkins\",\n    \"Docker\",\n    \"IBM WebSphere\",\n    \"JBoss Fuse\",\n    \"TFS\"\n  ],\n  \"databases\": [\n    \"MySQL\",\n    \"PostgreSQL\",\n    \"MongoDB\",\n    \"Couchbase\"\n  ],\n  \"frameworks_and_technologies\": [\n    \"Spring\",\n    \"ORM Hibernate\",\n    \"JDBC\",\n    \"Apache Kafka\",\n    \"Broadleaf\",\n    \"Angular 4\",\n    \"Maven\",\n    \"JUnit\",\n    \"WSDL\"\n  ],\n  \"ide_tools\": [\n    \"Eclipse\",\n    \"IntelliJ IDEA\",\n    \"WebStorm\",\n    \"VS Code\",\n    \"Postman\",\n    \"Git\",\n    \"SVN\",\n    \"Perforce\"\n  ]\n}\n```\n\nNote that I have grouped the skills into categories such as frontend, backend, devops, databases, frameworks_and_technologies, and ide_tools. Let me know if you would like to restructure the output in a different way!", "Here is the extracted skills structured into high-level expertise areas:\n\n```\n{\n  \"candidate_email\": \"rishon@gmail.com\",\n  \"frontend\": [\n    \"JavaScript\"\n  ],\n  \"backend\": [\n    \"JAVA\",\n    \"Spring Boot\",\n    \"Security\",\n    \"Mail\",\n    \"Data\",\n    \"JPA\",\n    \"Config\",\n    \"Netflix Eureka\",\n    \"Validation\"\n  ],\n  \"devops\": [\n    \"Docker\",\n    \"Kafka\",\n    \"JSON\",\n    \"JUnit5 + Hamcrest / Mockito\",\n    \"GitHub\",\n    \"Jira\"\n  ],\n  \"database_management\": [\n    \"PostgreSQL\",\n    \"MySQL\",\n    \"MongoDB\",\n    \"Redis\",\n    \"HSQLDB\"\n  ],\n  \"programming_languages\": [\n    \"JAVA\",\n    \"JavaScript\",\n    \"HTML5\",\n    \"CSS3\"\n  ],\n  \"ide_tools\": [\n    \"Eclipse\",\n    \"IntelliJ IDEA\",\n    \"Visual Studio Code\"\n  ],\n  \"operating_systems\": [\n    \"Windows\",\n    \"Mac OS\",\n    \"Linux\"\n  ]\n}\n```", "Here are the extracted skills structured into high-level expertise areas:\n\n```\n{\n  \"candidate_email\": \"shawne@gmail.com\",\n  \"frontend\": [\"HTML\", \"CSS\"],\n  \"backend\": [\n    \"Java\", \n    \"Kotlin\", \n    \"Spring Framework\", \n    \"Postgres\", \n    \"Oracle\"\n  ],\n  \"devops\": [\"Git\", \"Docker\", \"TeamCity\", \"GitLab\"],\n  \"languages\": [\"Java\", \"Python\", \"Scala\", \"JavaScript\", \"Kotlin\"],\n  \"databases\": [\"SQL\", \"Postgres\", \"Oracle\"],\n  \"system_design\": true,\n  \"agile_methods\": [\"Agile\", \"Scrum\", \"SAFE\"],\n  \"frameworks\": [\"Spring Framework\"],\n  \"database_management\": true\n}\n```", "Here is the extracted candidate's skills structured into high-level expertise areas:\n\n```json\n{\n  \"candidate_email\": \"arushi@ymail.com\",\n  \"frontend\": [\n    \"HTML5/CSS3\",\n    \"JQuery\",\n    \"Bootstrap3\"\n  ],\n  \"backend\": [\n    \"Java\",\n    \"JavaScript\",\n    \"Spring MVC\",\n    \"JPA\",\n    \"Hibernate\",\n    \"JDBC\",\n    \"SpringBoot\",\n    \"Spring Security\",\n    \"REST\",\n    \"JSON\"\n  ],\n  \"databases\": [\n    \"SQL (MySQL)\",\n    \"NoSQL (MongoDB)\"\n  ],\n  \"environments\": [\n    \"Eclipse\",\n    \"IntelliJ IDEA\",\n    \"GitHub\"\n  ],\n  \"technologies_frameworks\": [\n    \"OOP\",\n    \"AOP\",\n    \"Spring MVC\",\n    \"Hibernate\",\n    \"JDBC\",\n    \"SpringBoot\",\n    \"Spring Security\",\n    \"Spring Web\",\n    \"REST\",\n    \"JSON\",\n    \"Maven\",\n    \"Junit\",\n    \"Git\"\n  ],\n  \"systems\": [\n    \"Linux\",\n    \"Windows\"\n  ]\n}\n```\n\nNote that some skills are categorized under multiple areas (e.g., Spring Boot is listed in both the backend and technologies_frameworks categories). This is because the candidate has mentioned it as a key tool used in their projects, but also as part of their technical expertise."]"
+2025-03-30 19:44:23: task_name="None", task="execute the tool and get experience information for each resume  Don't alter tool outputs or make up values
+", agent="Resume Experience Extractor", status="started"
+2025-03-30 19:45:08: task_name="None", task="execute the tool and get experience information for each resume  Don't alter tool outputs or make up values
+", agent="Resume Experience Extractor", status="completed", output="["Here is the extracted data in JSON format:\n\n```\n{\n  \"gloriaromero@gmail.com\": {\n    \"experience\": 22,\n    \"roles\": [\n      {\"Team Lead\": 10},\n      {\"Software Developer\": 8}\n    ]\n  }\n}\n```\n\nExplanation:\n- Total experience: Gloria has worked for 22 years in the industry.\n- Roles and their respective experiences: \n  - Team Lead (10 years): This role includes her time as Team Lead at Mitotech LLC and VERYSELL-Icontri LLC. It's noted that she had more than 20 years of experience in software development, so we only count from when she became a team lead. At Mitotech LLC (2013---), and VERYSELL-Icontri LLC (2004/ 2013).\n  - Software Developer (8 years): This includes her time at IBS LLC where she was a Software Developer before becoming a Team Lead. The experience is counted from the start of this role until it turned into team lead.", "Here is the output in JSON format:\n\n{\n  \"petah@rmail.com\": {\n    \"experience\": \"7\",\n    \"roles\": [\n      {\"Java Back-End Developer\": \"2\", \"Technologies\": [\"Spring Boot, Hibernate, REST, Broadleaf, Apache Camel\"], \"Databases\": [\"MySQL, PostgreSQL, Couchbase\"], \"Tools\": [\"IntelliJ IDEA, JBoss Fuse, Postman, Jenkins, Docker\"]},\n      {\"Java Developer\": \"1\", \"Technologies\": [\"Java 6, IBM WebSphere, Web-Services (WSDL), Printboss utilities, Mainframe, UDB\"], \"Databases\": [], \"Tools\": []}\n    ]\n  }\n}", "Here is the extracted information in JSON format:\n\n```\n{\n  \"rishon@gmail.com\": {\n    \"experience\": 9,\n    \"roles\": [\n      {\n        \"Full-Stack Developer\": 4\n      },\n      {\n        \"JAVA BACK-END developer\": 2.5 (20% of 4 years is 1 year)\n      },\n      {\n        \"FULLSTACK Developer\": 3 (average of 2017 - 2020 experience)\n      }\n    ]\n  }\n}\n```\n\nHowever, I noticed that the candidate had multiple roles and experiences in different periods. To reflect this accurately, I would like to suggest a slight modification to the output:\n\n```\n{\n  \"rishon@gmail.com\": {\n    \"experience\": 9,\n    \"roles\": [\n      {\n        \"Full-Stack Developer (Current)\": 4\n      },\n      {\n        \"JAVA BACK-END developer (Elpisor LTD)\": 2.5\n      },\n      {\n        \"FULLSTACK Developer (Cetera Labs)\": 3\n      }\n    ]\n  }\n}\n```\n\nThis format better reflects the candidate's experiences in different roles across different periods.", "Here is the extracted experience of Shawn Cane in JSON format:\n\n{\n  \"shawne@gmail.com\": {\n    \"experience\": \"16\",\n    \"roles\": [\n      {\"Senior Software Engineer (Java/Kotlin Backend Developer)\": \"2\"},\n      {\"Senior Software Developer\": \"1\"},\n      {\"Software Engineer / Senior Software Engineer\": \"3\"},\n      {\"Software Developer / Senior Software Developer\": \"3\"},\n      {\"Junior Java Developer / Java Developer\": \"2\"}\n    ]\n  }\n}", "Here is the output in JSON format:\n\n```\n{\n  \"arushi@ymail.com\": {\n    \"experience\": \"5+\",\n    \"roles\": [\n      {\"Backend JAVA developer\": \"1\"},\n      {\"Full stack JAVA developer\": \"2\"}\n    ]\n  }\n}\n```\n\nExplanation:\n- Total experience: 5+\n- Roles and their corresponding years of experience:\n  - Backend JAVA developer: 1 year\n  - Full stack JAVA developer: 2 years"]"
+2025-03-30 19:45:08: task_name="None", task="Choose the most suitable interviewer for each shortlisted candidate.
+ Your goal is analyse the interviewer profiles from tool output for their skillsets and choose the best interviewer for each candidate 
+1. Fetch the current set of available interviewers 2. Choose the best interviewer for each candidate based on the candidates skills given to you as context from before agents and the interviewer skillsn along with job_role Java developer 3. Ensure the candidate and interviewers are present in outputs from before agents and from json and not hallucinated by you 4. If there are fewer matched interviewers available than the candidates you should still match them to only correct interviers they have multiple slots free
+6.If there are fewer matched interviewers available than the candidates you should still match it to one of the interviewers whose role and skill matches only
+", agent="Interviewer Candidate matcher", status="started"
+2025-03-30 19:45:34: task_name="None", task="Choose the most suitable interviewer for each shortlisted candidate.
+ Your goal is analyse the interviewer profiles from tool output for their skillsets and choose the best interviewer for each candidate 
+1. Fetch the current set of available interviewers 2. Choose the best interviewer for each candidate based on the candidates skills given to you as context from before agents and the interviewer skillsn along with job_role Java developer 3. Ensure the candidate and interviewers are present in outputs from before agents and from json and not hallucinated by you 4. If there are fewer matched interviewers available than the candidates you should still match them to only correct interviers they have multiple slots free
+6.If there are fewer matched interviewers available than the candidates you should still match it to one of the interviewers whose role and skill matches only
+", agent="Interviewer Candidate matcher", status="completed", output="[
+  {
+    "candidate_email": "gloriaromero@gmail.com",
+    "interviewer_name": "John Doe",
+    "slot": "2025-04-01, 10:00-12:00",
+    "role": "Java Developer"
+  },
+  {
+    "candidate_email": "petah@rmail.com",
+    "interviewer_name": "Jane Smith",
+    "slot": "2025-04-01, 13:00-15:00",
+    "role": "Java Developer"
+  },
+  {
+    "candidate_email": "rishon@gmail.com",
+    "interviewer_name": "Jane Smith",
+    "slot": "2025-04-03, 09:00-11:00",
+    "role": "Java Developer"
+  },
+  {
+    "candidate_email": "shawne@gmail.com",
+    "interviewer_name": "John Doe",
+    "slot": "2025-04-02, 14:00-16:00",
+    "role": "Java Developer"
+  },
+  {
+    "candidate_email": "arushi@ymail.com",
+    "interviewer_name": "Jane Smith",
+    "slot": "2025-04-02, 10:00-12:00",
+    "role": "Java Developer"
+  }
+]"
+2025-03-30 19:45:34: task_name="None", task="Plan interview slots by balancing interviewer availability. 1. Check available time slots for interviewers returned by match candidate with interviewers agent  2. Assign the best possible interview time for each candidate. 3. Ensure a fair workload distribution among interviewers.
+", agent="Interview Scheduler", status="started"
+2025-03-30 19:45:46: task_name="None", task="Plan interview slots by balancing interviewer availability. 1. Check available time slots for interviewers returned by match candidate with interviewers agent  2. Assign the best possible interview time for each candidate. 3. Ensure a fair workload distribution among interviewers.
+", agent="Interview Scheduler", status="completed", output="Interview Schedule:
+- Gloria Romero (gloriaromero@gmail.com): 2025-04-01, 10:00-11:00 with John Doe
+- Peter Kavinsky (petah@rmail.com): 2025-04-01, 13:00-14:00 with Jane Smith
+- Rishon LeZion (rishon@gmail.com): 2025-04-03, 09:00-10:00 with Jane Smith
+- Shawn Cane (shawne@gmail.com): 2025-04-02, 14:00-15:00 with John Doe
+- Arushi Yogi (arushi@ymail.com): 2025-04-02, 10:00-11:00 with Jane Smith
+
+Interviewer Workload:
+- John Doe: 2 interviews (Gloria Romero, Shawn Cane)
+- Jane Smith: 3 interviews (Peter Kavinsky, Rishon LeZion, Arushi Yogi)
+
+This schedule is created based on the available time slots for each interviewer and the candidates assigned to them. Each interview is scheduled for 1 hour, and the workload is fairly distributed among the interviewers. 
+
+Here is the schedule in a detailed format:
+
+| Candidate Name | Candidate Email | Interviewer Name | Interview Date | Interview Time |
+| --- | --- | --- | --- | --- |
+| Gloria Romero | gloriaromero@gmail.com | John Doe | 2025-04-01 | 10:00-11:00 |
+| Peter Kavinsky | petah@rmail.com | Jane Smith | 2025-04-01 | 13:00-14:00 |
+| Rishon LeZion | rishon@gmail.com | Jane Smith | 2025-04-03 | 09:00-10:00 |
+| Shawn Cane | shawne@gmail.com | John Doe | 2025-04-02 | 14:00-15:00 |
+| Arushi Yogi | arushi@ymail.com | Jane Smith | 2025-04-02 | 10:00-11:00 |
+
+This schedule can be adjusted if there are any changes in the availability of the interviewers or the candidates. However, based on the current data, this schedule provides a fair distribution of workload among the interviewers and accommodates all the candidates."
+2025-03-30 19:45:46: task_name="None", task="Generate and send professional interview invitation emails. 1. Include candidate and interviewer details. 2. Mention the scheduled interview slot. 3. Ensure a positive and professional tone in the email.
+", agent="Interview Email organiser", status="started"
+2025-03-30 19:45:58: task_name="None", task="Generate and send professional interview invitation emails. 1. Include candidate and interviewer details. 2. Mention the scheduled interview slot. 3. Ensure a positive and professional tone in the email.
+", agent="Interview Email organiser", status="completed", output="[
+  {
+    "to_email": "gloriaromero@gmail.com",
+    "subject": "Interview Invitation for Job Role",
+    "body": "Dear Gloria Romero, we are pleased to invite you for an interview with John Doe on 2025-04-01 at 10:00-11:00. We appreciate your interest in the position and look forward to discussing your qualifications further. Please feel free to reach out if you have any questions or concerns. Best regards, John Doe"
+  },
+  {
+    "to_email": "petah@rmail.com",
+    "subject": "Interview Invitation for Job Role",
+    "body": "Dear Peter Kavinsky, we are pleased to invite you for an interview with Jane Smith on 2025-04-01 at 13:00-14:00. We appreciate your interest in the position and look forward to discussing your qualifications further. Please feel free to reach out if you have any questions or concerns. Best regards, Jane Smith"
+  },
+  {
+    "to_email": "rishon@gmail.com",
+    "subject": "Interview Invitation for Job Role",
+    "body": "Dear Rishon LeZion, we are pleased to invite you for an interview with Jane Smith on 2025-04-03 at 09:00-10:00. We appreciate your interest in the position and look forward to discussing your qualifications further. Please feel free to reach out if you have any questions or concerns. Best regards, Jane Smith"
+  },
+  {
+    "to_email": "shawne@gmail.com",
+    "subject": "Interview Invitation for Job Role",
+    "body": "Dear Shawn Cane, we are pleased to invite you for an interview with John Doe on 2025-04-02 at 14:00-15:00. We appreciate your interest in the position and look forward to discussing your qualifications further. Please feel free to reach out if you have any questions or concerns. Best regards, John Doe"
+  },
+  {
+    "to_email": "arushi@ymail.com",
+    "subject": "Interview Invitation for Job Role",
+    "body": "Dear Arushi Yogi, we are pleased to invite you for an interview with Jane Smith on 2025-04-02 at 10:00-11:00. We appreciate your interest in the position and look forward to discussing your qualifications further. Please feel free to reach out if you have any questions or concerns. Best regards, Jane Smith"
+  }
+]"

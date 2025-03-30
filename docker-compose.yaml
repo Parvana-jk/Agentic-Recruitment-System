@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
   qdrant:
+    container_name: qdrant
     image: qdrant/qdrant
     ports:
       - "6333:6333"
@@ -9,26 +10,33 @@ services:
       - qdrant_data:/qdrant/storage
 
   streamlit:
+    container_name: streamlit
     build: .
     env_file:
       - .env
-    
-    volumes:
-      - ./data:/app/data
-      - huggingface_cache:/root/.cache/huggingface  # Mount HF cache to a volume
     ports:
       - "8501:8501"
     depends_on:
       - qdrant
 
   ollama:
+    container_name: ollama
     image: ollama/ollama
-    entrypoint : ["/bin/bash","-c", "apt update && apt install -y wget && /root/ollama.sh"]
+    entrypoint: ["/bin/bash", "-c", "
+      apt update && apt install -y wget &&
+      ollama serve & 
+      echo 'Waiting for Ollama server to start...' &&
+      until wget -q --spider http://localhost:11434; do sleep 2; done &&
+      echo 'Ollama server is running. Starting model...' &&
+      ollama pull nomic-embed-text &&
+      ollama pull llama3.1 &&
+      echo 'Ollama is READY to serve models' &&
+      tail -f /dev/null
+      "]
     ports:
       - "1500:11434"
     volumes:
       - ollama:/root/.ollama
-      - ./ollama.sh:/root/ollama.sh
 
 volumes:
   qdrant_data:
