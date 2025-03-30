@@ -1,0 +1,75 @@
+analyse_job_description:
+  name: Gather the right candidate resumes
+  description: >
+    Given a job description (JD) for the role {job_profile}
+    Execute the tool and pass on the top 5 candidate information
+  expected_output: >
+   Folder name where the candidate information is stored
+  agent: HR_agent
+
+extract_resume_contacts:
+  name: Extract Contact Information from Resumes
+  description: >
+    execute the tool and get contact information for each resume 
+    Don't alter tool outputs or make up values
+  expected_output: >
+    A structured JSON containing contact details for each candidate.
+  agent: resume_contact_extractor
+
+extract_resume_skills:
+  name: Extract Skills from Candidate Resumes
+  description: >
+    execute the tool and get skills information for each resume 
+    Don't alter tool outputs or make up values
+  expected_output: >
+    output from tool as it is , it should have details of each shortlisted candidate , trust the tool
+  agent: resume_skill_extractor
+
+extract_resume_experience:
+  name: Extract Experience Details from Resumes
+  description: >
+    execute the tool and get experience information for each resume 
+    Don't alter tool outputs or make up values
+  expected_output: >
+    output from tool as it is , it should have details of each shortlisted candidate , trust the tool
+  agent: resume_experience_extractor
+
+match_candidate_with_interviewer:
+  name: Match Candidates with the Best Interviewers
+  description: >
+    Choose the most suitable interviewer for each shortlisted candidate.
+     Your goal is analyse the interviewer profiles from tool output for their skillsets and choose the best interviewer for each candidate 
+    1. Fetch the current set of available interviewers
+    2. Choose the best interviewer for each candidate based on the candidates skills given to you as context from before agents and the interviewer skillsn along with job_role {job_role}
+    3. Ensure the candidate and interviewers are present in outputs from before agents and from json and not hallucinated by you
+    4. If there are fewer matched interviewers available than the candidates you should still match them to only correct interviers they have multiple slots free
+ 
+    6.If there are fewer matched interviewers available than the candidates you should still match it to one of the interviewers whose role and skill matches only
+  expected_output: >
+    A list of interviewers mapped to candidates along with the slot allocated to the candidate. This list should contain the candidate email, the interviewer name, the slot of the interview and the role
+  agent: interview_candidate_matching
+
+schedule_interviews:
+  name: Schedule Interviews for Candidates
+  description: >
+    Plan interview slots by balancing interviewer availability.
+    1. Check available time slots for interviewers returned by match candidate with interviewers agent 
+    2. Assign the best possible interview time for each candidate.
+    3. Ensure a fair workload distribution among interviewers.
+  expected_output: >
+    A finalized schedule with interview slots for each candidate (take candidate email and name for indentifiers).
+  agent: interview_scheduler
+
+
+
+send_invitation_emails:
+  name: Send Interview Invitation Emails
+  description: >
+    Generate and send professional interview invitation emails.
+    1. Include candidate and interviewer details.
+    2. Mention the scheduled interview slot.
+    3. Ensure a positive and professional tone in the email.
+  expected_output: >
+    to_email, subject, body
+  agent: invitation_generator
+

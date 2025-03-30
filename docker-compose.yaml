@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  qdrant:
+    image: qdrant/qdrant
+    ports:
+      - "6333:6333"
+    volumes:
+      - qdrant_data:/qdrant/storage
+
+  streamlit:
+    build: .
+    env_file:
+      - .env
+    
+    volumes:
+      - ./data:/app/data
+      - huggingface_cache:/root/.cache/huggingface  # Mount HF cache to a volume
+    ports:
+      - "8501:8501"
+    depends_on:
+      - qdrant
+
+  ollama:
+    image: ollama/ollama
+    entrypoint : ["/bin/bash","-c", "apt update && apt install -y wget && /root/ollama.sh"]
+    ports:
+      - "1500:11434"
+    volumes:
+      - ollama:/root/.ollama
+      - ./ollama.sh:/root/ollama.sh
+
+volumes:
+  qdrant_data:
+  ollama:
+  huggingface_cache:

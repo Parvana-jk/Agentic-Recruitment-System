@@ -1,0 +1,178 @@
+[
+    {
+      "id": 1,
+      "name": "John Doe",
+      "role": "Java Developer",
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "Microservices",
+        "Hibernate",
+        "JPA",
+        "Kafka",
+        "REST APIs",
+        "Docker",
+        "Kubernetes",
+        "AWS",
+        "JUnit",
+        "Maven",
+        "Gradle",
+        "Git",
+        "CI/CD",
+        "PostgreSQL",
+        "MongoDB"
+      ],
+      "experience": 8,
+      "available_slots": [
+        { "date": "2025-04-01", "time": "10:00-12:00" },
+        { "date": "2025-04-02", "time": "14:00-16:00" }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "role": "Java Developer",
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "Hibernate",
+        "JPA",
+        "Microservices",
+        "GraphQL",
+        "Apache Kafka",
+        "RabbitMQ",
+        "Docker",
+        "Kubernetes",
+        "AWS Lambda",
+        "DynamoDB",
+        "Terraform",
+        "CI/CD",
+        "JUnit",
+        "Mockito"
+      ],
+      "experience": 7,
+      "available_slots": [
+        { "date": "2025-04-01", "time": "13:00-15:00" },
+        { "date": "2025-04-03", "time": "09:00-11:00" }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Bob Johnson",
+      "role": "UI Developer",
+      "skills": [
+        "JavaScript",
+        "React.js",
+        "Angular",
+        "Vue.js",
+        "HTML5",
+        "CSS3",
+        "SASS",
+        "Tailwind CSS",
+        "Bootstrap",
+        "Redux",
+        "TypeScript",
+        "Webpack",
+        "Babel",
+        "Figma",
+        "Material UI",
+        "RESTful APIs",
+        "GraphQL",
+        "Jest",
+        "Cypress"
+      ],
+      "experience": 6,
+      "available_slots": [
+        { "date": "2025-04-02", "time": "10:00-12:00" },
+        { "date": "2025-04-04", "time": "14:00-16:00" }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Alice Brown",
+      "role": "UI Developer",
+      "skills": [
+        "JavaScript",
+        "React.js",
+        "Next.js",
+        "Tailwind CSS",
+        "SCSS",
+        "Bootstrap",
+        "Material UI",
+        "Redux",
+        "Storybook",
+        "Figma",
+        "Jest",
+        "Cypress",
+        "GraphQL",
+        "REST APIs",
+        "Three.js",
+        "WebAssembly",
+        "Webpack"
+      ],
+      "experience": 4,
+      "available_slots": [
+        { "date": "2025-04-03", "time": "13:00-15:00" },
+        { "date": "2025-04-05", "time": "10:00-12:00" }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Michael Chen",
+      "role": "Python developer",
+      "skills": [
+        "Python",
+        "TensorFlow",
+        "PyTorch",
+        "Transformers",
+        "OpenAI API",
+        "LangChain",
+        "LlamaIndex",
+        "Hugging Face Models",
+        "FastAPI",
+        "Flask",
+        "AWS SageMaker",
+        "Azure AI",
+        "Vector Databases",
+        "FAISS",
+        "RAG Pipelines",
+        "Prompt Engineering",
+        "Fine-Tuning LLMs"
+      ],
+      "experience": 6,
+      "available_slots": [
+        { "date": "2025-04-02", "time": "09:00-11:00" },
+        { "date": "2025-04-04", "time": "13:00-15:00" }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Sophia Lee",
+      "role": "Python developer",
+      "skills": [
+        "Python",
+        "PyTorch",
+        "Hugging Face",
+        "LangChain",
+        "LLMs",
+        "Vector Search",
+        "OpenAI API",
+        "Retrieval Augmented Generation (RAG)",
+        "Fine-Tuning LLMs",
+        "Transformer Models",
+        "Speech-to-Text",
+        "FastAPI",
+        "Gradio",
+        "Django",
+        "MLOps",
+        "Databricks",
+        "AWS Bedrock"
+      ],
+      "experience": 5,
+      "available_slots": [
+        { "date": "2025-04-03", "time": "10:00-12:00" },
+        { "date": "2025-04-05", "time": "14:00-16:00" }
+      ]
+    }
+  ]
+  
