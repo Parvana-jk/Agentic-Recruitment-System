@@ -99,7 +99,10 @@ Run all services (Qdrant, Streamlit, and Ollama) in Docker:
     ```bash
     podman compose up --build -d
     ```
-
+   or
+    ```bash
+    docker-compose up --build -d
+    ```
 
 This will:
 - Start `qdrant`, `streamlit`, and `ollama` inside containers.
