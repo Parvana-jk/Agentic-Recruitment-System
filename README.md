@@ -1,7 +1,7 @@
-# AgentiC AI for HR Resume Shortlisting
+# Agentic AI for HR Resume Shortlisting
 
 ## Overview
-This project is an end-to-end AgentiC AI solution designed for HR resume shortlisting. It automates the process of:
+This project is an end-to-end Agentic AI solution designed for HR resume shortlisting. It automates the process of:
 - Parsing and processing candidate resumes.
 - Matching candidates to job profiles with high accuracy and explainability.
 - Selecting the best interviewers for each candidate.
@@ -88,9 +88,18 @@ You have two options to run the application:
 ### **Method 1: Complete Docker Setup**
 Run all services (Qdrant, Streamlit, and Ollama) in Docker:
 
-```bash
-podman compose up --build -d
-```
+
+1. Make sure the .env file is updated to use the docker endpoints:
+   ```
+    QDRANT_API="http://qdrant:6333"
+    OLLAMA_API="http://ollama:11434"
+   ```
+
+2. Run the complete docker compose 
+    ```bash
+    podman compose up --build -d
+    ```
+
 
 This will:
 - Start `qdrant`, `streamlit`, and `ollama` inside containers.
@@ -120,7 +129,13 @@ If Ollama is slow in Docker, you can run only Qdrant inside a container and exec
    ollama pull nomic-embed-text
    ```
 
-5. Run the Streamlit application locally:
+5. Make sure the .env file is updated to use the local endpoints:
+   ```
+    QDRANT_API="http://localhost:6333"
+    OLLAMA_API="http://localhost:11434"
+   ```
+
+6. Run the Streamlit application locally:
    ```bash
    streamlit run launch_simple.py
    ```
